@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Camloco - fun camera effects</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Camloco Web">
-<link rel="apple-touch-icon" href="images/apple-touch-icon-iphone-60x60.png">
-<link rel="apple-touch-icon" sizes="60x60" href="images/apple-touch-icon-ipad-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-iphone-retina-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-ipad-retina-152x152.png">
- <link href="css/index.css" rel="stylesheet"/>
-<link rel="manifest" href="manifest.json">
-<script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
-<script type="text/javascript" src="canvas2image.js"></script>
-<script type="text/javascript" src="webgl-utils.js"></script>
-<script src="js/recorderjs/recorder.js"></script>
-<script src="js/raphael-min.js"></script>
-<script type="text/javascript" src="main.js"></script>
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
-<script id="shader-1-fs" type="f">
+<head>
+	<title>Camloco - fun camera effects</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Camloco Web">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon-iphone-60x60.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/apple-touch-icon-ipad-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-iphone-retina-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-ipad-retina-152x152.png">
+	<link href="css/index.css" rel="stylesheet" />
+	<link rel="manifest" href="manifest.json">
+	<script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+	<script type="text/javascript" src="canvas2image.js"></script>
+	<script type="text/javascript" src="webgl-utils.js"></script>
+	<script src="js/recorderjs/recorder.js"></script>
+	<script src="js/raphael-min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+	<script id="shader-1-fs" type="f">
 precision highp float;
 varying vec2 vTextureCoord;
 uniform sampler2D texture0;
@@ -335,7 +336,7 @@ void main(void) {
 
 }</script>
 
-<script id="shader-2-fs" type="f">
+	<script id="shader-2-fs" type="f">
 precision mediump float;
 varying vec2 vTextureCoord;
 uniform sampler2D texture0;
@@ -714,7 +715,7 @@ void main(void) {
 }
 </script>
 
-<script id="shader-3-fs" type="f">
+	<script id="shader-3-fs" type="f">
 precision highp float;
 varying vec2 vTextureCoord;
 uniform sampler2D texture0;
@@ -923,7 +924,7 @@ void main(void) {
 }
 </script>
 
-<script id="shader-4-fs" type="f">
+	<script id="shader-4-fs" type="f">
     precision mediump float;
     varying vec2 vTextureCoord;
     uniform sampler2D texture0;
@@ -1012,7 +1013,7 @@ void main(void) {
 }
 </script>
 
-<script id="shader-5-fs" type="f">
+	<script id="shader-5-fs" type="f">
 precision mediump float;
 varying vec2 vTextureCoord;
 uniform sampler2D texture0;
@@ -1275,7 +1276,7 @@ void main(void) {
 }
 </script>
 
-<script id="shader-6-fs" type="f">
+	<script id="shader-6-fs" type="f">
 precision highp float;
 varying vec2 vTextureCoord;
 uniform sampler2D texture0;
@@ -1453,7 +1454,7 @@ void main(void) {
 }
 </script>
 
-<script id="shader-7-fs" type="f">
+	<script id="shader-7-fs" type="f">
 precision mediump float;
 varying vec2 vTextureCoord;
 uniform sampler2D texture0;
@@ -1663,7 +1664,7 @@ void main(void) {
 }
 </script>
 
-<script id="shader-8-fs" type="f">
+	<script id="shader-8-fs" type="f">
 precision mediump float;
 varying vec2 vTextureCoord;
 uniform sampler2D texture0;
@@ -1915,7 +1916,7 @@ void main(void) {
 </script>
 
 
-<script id="shader-vs" type="v">
+	<script id="shader-vs" type="v">
     attribute vec3 aVertexPosition;
     attribute vec2 aTextureCoord;
 
@@ -1932,29 +1933,32 @@ void main(void) {
 </head>
 
 <div id="container">
-  <div id="main">
-    <canvas id="webgl-canvas" top="0"></canvas>
-<div id="no-camera">No Webcam!</div>
-    <div id="close-button">x</div>
-    <splash class = "btn" enabled id="splash"></splash>
-    <svgpanel class = "canvas" enabled>
-            <svg height = "100%" width = "100%"></svg>
-    </svgpanel>
-    <panel id =class = "img" enabled>   </panel>
-    <button class="btn" enabled></button>
-    <button1 class="btn" enabled></button1>
-    <button2 class="btn" enabled></button2>
-    <button3 class="btn" enabled></button3>
-    <button4 class="btn" enabled></button4>
-    <button5 class="btn" enabled></button5>
-    <button6 class="btn" enabled></button6>
-    <button7 class="btn" enabled></button7>
-    <next class="btn" hidden enabled></next>
-    <back class="btn" hidden enabled></back>
-    <progress value="0" max="100" id = "progress"></progress>
-    <settings class="btn" hidden></settings>
-    </div>
-  </div>
+	<div id="main">
+		<canvas id="webgl-canvas" top="0"></canvas>
+		<div id="no-camera">No Webcam!</div>
+		<div id="close-button">x</div>
+		<splash class="btn" enabled id="splash"></splash>
+		<svgpanel class="canvas" enabled>
+			<svg height="100%" width="100%"></svg>
+		</svgpanel>
+		<panel id=class="img" enabled> </panel>
+		<button class="btn" enabled></button>
+		<button1 class="btn" enabled></button1>
+		<button2 class="btn" enabled></button2>
+		<button3 class="btn" enabled></button3>
+		<button4 class="btn" enabled></button4>
+		<button5 class="btn" enabled></button5>
+		<button6 class="btn" enabled></button6>
+		<button7 class="btn" enabled></button7>
+		<next class="btn" hidden enabled></next>
+		<back class="btn" hidden enabled></back>
+		<portraitCover>
+			<smartphone display="none"></smartphone>
+		</portraitCover>
+		<progress value="0" max="100" id="progress"></progress>
+		<settings class="btn" hidden></settings>
+	</div>
+</div>
 </body>
 
 </html>
